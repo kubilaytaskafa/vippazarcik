@@ -1,0 +1,729 @@
+import i18n from "i18next";
+import { initReactI18next } from "react-i18next";
+import LanguageDetector from "i18next-browser-languagedetector";
+import Backend from "i18next-http-backend";
+
+const resources = {
+  tr: {
+    translation: {
+      meta: {
+        title: {
+          main: "Antalya VIP Transfer Hizmetleri",
+          full: "VIP Pazarçık - Antalya VIP Transfer Hizmetleri",
+        },
+        description:
+          "Antalya'nın en lüks ve konforlu VIP transfer hizmeti. Havalimanı transferi, otel transferi, VIP transfer ve düğün transferi hizmetleri.",
+        keywords:
+          "VIP transfer, Antalya transfer, havalimanı transferi, otel transferi, VIP araç, lüks transfer",
+      },
+      company: {
+        name: "VIP Pazarçık",
+        shortName: "VIP Pazarçık",
+      },
+      header: {
+        home: "Ana Sayfa",
+        about: "Hakkımızda",
+        services: "Hizmetler",
+        cars: "Araçlarımız",
+        contact: "İletişim",
+        reservation: "Rezervasyon",
+        language: "Dil",
+      },
+      home: {
+        hero: {
+          title: "VIP Transfer Hizmetleri",
+          description: "Antalya'nın en lüks ve konforlu transfer hizmeti",
+          cta: "Hemen Rezervasyon Yap",
+        },
+        services: {
+          title: "Hizmetlerimiz",
+          airport: "Havalimanı Transferi",
+          hotel: "Otel Transferi",
+          vip: "VIP Transfer",
+          wedding: "Düğün Transferi",
+        },
+        cars: {
+          title: "Araçlarımız",
+          viewAll: "Tümünü Gör",
+          passengers: "Yolcu",
+        },
+        cta: {
+          title: "Hemen Rezervasyon Yapın",
+          description:
+            "Güvenli ve konforlu seyahat için VIP transfer hizmetimizi tercih edin",
+        },
+      },
+      about: {
+        title: "Hakkımızda",
+        description:
+          "VIP Pazarçık olarak, müşterilerimize en kaliteli transfer hizmetini sunmak için çalışıyoruz.",
+      },
+      services: {
+        title: "Hizmetlerimiz",
+        description: "Size özel transfer hizmetleri",
+        airport: {
+          title: "Havalimanı Transferi",
+          description: "Antalya Havalimanı'ndan otelinize konforlu transfer",
+        },
+        hotel: {
+          title: "Otel Transferi",
+          description: "Oteller arası transfer hizmeti",
+        },
+        vip: {
+          title: "VIP Transfer",
+          description: "Özel VIP araçlarla lüks transfer",
+        },
+        wedding: {
+          title: "Düğün Transferi",
+          description: "Düğün ve özel günleriniz için transfer hizmeti",
+        },
+      },
+      cars: {
+        title: "Araçlarımız",
+        description: "Size uygun aracı seçin",
+        features: {
+          capacity: "Kapasite",
+          features: "Özellikler",
+          price: "Fiyat",
+          luggage: "Bagaj",
+          luggageCount: "Bagaj Sayısı",
+          luggageUnit: "adet",
+        },
+      },
+      contact: {
+        title: "İletişim",
+        description: "Bizimle iletişime geçin",
+        form: {
+          name: "Ad Soyad",
+          email: "E-posta",
+          phone: "Telefon",
+          message: "Mesaj",
+          submit: "Gönder",
+        },
+        info: {
+          address: "Adres",
+          phone: "Telefon",
+          email: "E-posta",
+          rights: "Tüm hakları saklıdır",
+        },
+      },
+      reservation: {
+        title: "Rezervasyon",
+        form: {
+          title: "Rezervasyon Formu",
+        },
+        pickupType: "Alış Türü",
+        dropoffType: "Bırakış Türü",
+        pickupPoint: "Alış Noktası",
+        dropoffPoint: "Bırakış Noktası",
+        pickupRegion: "Alış Bölgesi",
+        dropoffRegion: "Bırakış Bölgesi",
+        car: "Araç",
+        selectType: "Tür Seçin",
+        selectPoint: "Nokta Seçin",
+        selectRegion: "Bölge Seçin",
+        selectHotel: "Otel Seçin",
+        selectCar: "Araç Seçin",
+        airport: "Havalimanı",
+        hotel: "Otel",
+        submit: "Rezervasyon Yap",
+        adults: "Yetişkin Sayısı",
+        children: "Çocuk Sayısı",
+        luggage: "Bagaj Sayısı",
+        luggageUnit: "adet",
+        date: "Tarih",
+        time: "Saat",
+        message: "Mesaj",
+        messagePlaceholder:
+          "Eklemek istediğiniz notları buraya yazabilirsiniz...",
+        pickupCity: "Alış Şehri",
+        dropoffCity: "Bırakış Şehri",
+        selectCity: "Şehir Seçin",
+        carTypes: {
+          sedan: "Sedan (4 Kişi)",
+          suv: "SUV (6 Kişi)",
+          minibus: "Minibüs (12 Kişi)",
+          van: "Van (8 Kişi)",
+        },
+      },
+      common: {
+        loading: "Yükleniyor...",
+        error: "Bir hata oluştu",
+        success: "İşlem başarılı",
+        required: "Bu alan zorunludur",
+        submit: "Gönder",
+        cancel: "İptal",
+        save: "Kaydet",
+        delete: "Sil",
+        edit: "Düzenle",
+        search: "Ara",
+        filter: "Filtrele",
+        sort: "Sırala",
+        view: "Görüntüle",
+        back: "Geri",
+        next: "İleri",
+        previous: "Önceki",
+        select: "Seçin",
+        all: "Tümü",
+        none: "Hiçbiri",
+        yes: "Evet",
+        no: "Hayır",
+        confirm: "Onayla",
+        close: "Kapat",
+      },
+      validation: {
+        required: "Bu alan zorunludur",
+        minAdults: "En az 1 yetişkin olmalıdır",
+        minChildren: "Çocuk sayısı 0'dan küçük olamaz",
+        minLuggage: "Bagaj sayısı 0'dan küçük olamaz",
+        integer: "Lütfen tam sayı giriniz",
+        futureDate: "Geçmiş bir tarih seçemezsiniz",
+      },
+    },
+  },
+  en: {
+    translation: {
+      meta: {
+        title: {
+          main: "Antalya VIP Transfer Services",
+          full: "VIP Pazarçık - Antalya VIP Transfer Services",
+        },
+        description:
+          "The most luxurious and comfortable VIP transfer service in Antalya. Airport transfer, hotel transfer, VIP transfer and wedding transfer services.",
+        keywords:
+          "VIP transfer, Antalya transfer, airport transfer, hotel transfer, VIP car, luxury transfer",
+      },
+      company: {
+        name: "VIP Pazarçık",
+        shortName: "VIP Pazarçık",
+      },
+      header: {
+        home: "Home",
+        about: "About",
+        services: "Services",
+        cars: "Our Cars",
+        contact: "Contact",
+        reservation: "Reservation",
+        language: "Language",
+      },
+      home: {
+        hero: {
+          title: "VIP Transfer Services",
+          description:
+            "The most luxurious and comfortable transfer service in Antalya",
+          cta: "Book Now",
+        },
+        services: {
+          title: "Our Services",
+          airport: "Airport Transfer",
+          hotel: "Hotel Transfer",
+          vip: "VIP Transfer",
+          wedding: "Wedding Transfer",
+        },
+        cars: {
+          title: "Our Cars",
+          viewAll: "View All",
+          passengers: "Passengers",
+        },
+        cta: {
+          title: "Book Now",
+          description:
+            "Choose our VIP transfer service for safe and comfortable travel",
+        },
+      },
+      about: {
+        title: "About Us",
+        description:
+          "As VIP Pazarçık, we work to provide our customers with the highest quality transfer service.",
+      },
+      services: {
+        title: "Our Services",
+        description: "Special transfer services for you",
+        airport: {
+          title: "Airport Transfer",
+          description:
+            "Comfortable transfer from Antalya Airport to your hotel",
+        },
+        hotel: {
+          title: "Hotel Transfer",
+          description: "Transfer service between hotels",
+        },
+        vip: {
+          title: "VIP Transfer",
+          description: "Luxury transfer with special VIP vehicles",
+        },
+        wedding: {
+          title: "Wedding Transfer",
+          description: "Transfer service for weddings and special occasions",
+        },
+      },
+      cars: {
+        title: "Our Cars",
+        description: "Choose the car that suits you",
+        features: {
+          capacity: "Capacity",
+          luggage: "Luggage",
+          price: "Price",
+        },
+      },
+      contact: {
+        title: "Contact",
+        description: "Get in touch with us",
+        form: {
+          name: "Full Name",
+          email: "Email",
+          phone: "Phone",
+          message: "Message",
+          submit: "Send",
+        },
+        info: {
+          address: "Address",
+          phone: "Phone",
+          email: "Email",
+          rights: "All rights reserved",
+        },
+      },
+      reservation: {
+        title: "Reservation",
+        form: {
+          title: "Reservation Form",
+        },
+        pickupType: "Pickup Type",
+        dropoffType: "Dropoff Type",
+        pickupPoint: "Pickup Point",
+        dropoffPoint: "Dropoff Point",
+        pickupRegion: "Pickup Region",
+        dropoffRegion: "Dropoff Region",
+        car: "Car",
+        selectType: "Select Type",
+        selectPoint: "Select Point",
+        selectRegion: "Select Region",
+        selectHotel: "Select Hotel",
+        selectCar: "Select Car",
+        airport: "Airport",
+        hotel: "Hotel",
+        submit: "Make Reservation",
+        adults: "Number of Adults",
+        children: "Number of Children",
+        luggage: "Number of Luggage",
+        date: "Date",
+        time: "Time",
+        message: "Message",
+        messagePlaceholder: "Add any additional notes here...",
+        pickupCity: "Pickup City",
+        dropoffCity: "Dropoff City",
+        selectCity: "Select City",
+        carTypes: {
+          sedan: "Sedan (4 Passengers)",
+          suv: "SUV (6 Passengers)",
+          minibus: "Minibus (12 Passengers)",
+          van: "Van (8 Passengers)",
+        },
+      },
+      common: {
+        loading: "Loading...",
+        error: "An error occurred",
+        success: "Operation successful",
+        required: "This field is required",
+        submit: "Submit",
+        cancel: "Cancel",
+        save: "Save",
+        delete: "Delete",
+        edit: "Edit",
+        search: "Search",
+        filter: "Filter",
+        sort: "Sort",
+        view: "View",
+        back: "Back",
+        next: "Next",
+        previous: "Previous",
+        select: "Select",
+        all: "All",
+        none: "None",
+        yes: "Yes",
+        no: "No",
+        confirm: "Confirm",
+        close: "Close",
+      },
+      validation: {
+        required: "This field is required",
+        minAdults: "At least 1 adult is required",
+        minChildren: "Number of children cannot be negative",
+        minLuggage: "Number of luggage cannot be negative",
+        integer: "Please enter a whole number",
+        futureDate: "Cannot select a past date",
+      },
+    },
+  },
+  de: {
+    translation: {
+      meta: {
+        title: {
+          main: "Antalya VIP Transfer Dienstleistungen",
+          full: "VIP Pazarçık - Antalya VIP Transfer Dienstleistungen",
+        },
+        description:
+          "Der luxuriöseste und komfortabelste VIP-Transferservice in Antalya. Flughafentransfer, Hoteltransfer, VIP-Transfer und Hochzeitstransfer.",
+        keywords:
+          "VIP Transfer, Antalya Transfer, Flughafentransfer, Hoteltransfer, VIP Fahrzeug, Luxus Transfer",
+      },
+      company: {
+        name: "VIP Pazarçık",
+        shortName: "VIP Pazarçık",
+      },
+      header: {
+        home: "Startseite",
+        about: "Über uns",
+        services: "Dienstleistungen",
+        cars: "Unsere Fahrzeuge",
+        contact: "Kontakt",
+        reservation: "Reservierung",
+        language: "Sprache",
+      },
+      home: {
+        hero: {
+          title: "VIP Transfer Services",
+          description:
+            "Der luxuriöseste und komfortabelste Transferservice in Antalya",
+          cta: "Jetzt Buchen",
+        },
+        services: {
+          title: "Unsere Dienstleistungen",
+          airport: "Flughafentransfer",
+          hotel: "Hoteltransfer",
+          vip: "VIP Transfer",
+          wedding: "Hochzeitstransfer",
+        },
+        cars: {
+          title: "Unsere Fahrzeuge",
+          viewAll: "Alle anzeigen",
+          passengers: "Passagiere",
+        },
+        cta: {
+          title: "Jetzt Buchen",
+          description:
+            "Wählen Sie unseren VIP-Transferservice für sichere und komfortable Reisen",
+        },
+      },
+      about: {
+        title: "Über Uns",
+        description:
+          "Als VIP Pazarçık arbeiten wir daran, unseren Kunden den höchstmöglichen Transfer-Service zu bieten.",
+      },
+      services: {
+        title: "Unsere Dienstleistungen",
+        description: "Spezielle Transferservices für Sie",
+        airport: {
+          title: "Flughafentransfer",
+          description:
+            "Komfortabler Transfer vom Flughafen Antalya zu Ihrem Hotel",
+        },
+        hotel: {
+          title: "Hoteltransfer",
+          description: "Transferservice zwischen Hotels",
+        },
+        vip: {
+          title: "VIP Transfer",
+          description: "Luxuriöser Transfer mit speziellen VIP-Fahrzeugen",
+        },
+        wedding: {
+          title: "Hochzeitstransfer",
+          description: "Transferservice für Hochzeiten und besondere Anlässe",
+        },
+      },
+      cars: {
+        title: "Unsere Fahrzeuge",
+        description: "Wählen Sie das passende Fahrzeug",
+        features: {
+          capacity: "Kapazität",
+          luggage: "Gepäck",
+          price: "Preis",
+        },
+      },
+      contact: {
+        title: "Kontakt",
+        description: "Kontaktieren Sie uns",
+        form: {
+          name: "Vollständiger Name",
+          email: "E-Mail",
+          phone: "Telefon",
+          message: "Nachricht",
+          submit: "Senden",
+        },
+        info: {
+          address: "Adresse",
+          phone: "Telefon",
+          email: "E-Mail",
+          rights: "Alle Rechte vorbehalten",
+        },
+      },
+      reservation: {
+        title: "Reservierung",
+        form: {
+          title: "Reservierungsformular",
+        },
+        pickupType: "Abholtyp",
+        dropoffType: "Abgabetyp",
+        pickupPoint: "Abholpunkt",
+        dropoffPoint: "Abgabepunkt",
+        pickupRegion: "Abholregion",
+        dropoffRegion: "Abgaberegion",
+        car: "Auto",
+        selectType: "Typ auswählen",
+        selectPoint: "Punkt auswählen",
+        selectRegion: "Region auswählen",
+        selectHotel: "Hotel auswählen",
+        selectCar: "Auto auswählen",
+        airport: "Flughafen",
+        hotel: "Hotel",
+        submit: "Reservierung vornehmen",
+        adults: "Anzahl der Erwachsenen",
+        children: "Anzahl der Kinder",
+        luggage: "Anzahl der Gepäckstücke",
+        date: "Datum",
+        time: "Uhrzeit",
+        message: "Nachricht",
+        messagePlaceholder: "Fügen Sie hier zusätzliche Notizen hinzu...",
+        pickupCity: "Abholstadt",
+        dropoffCity: "Abgabestadt",
+        selectCity: "Stadt auswählen",
+        carTypes: {
+          sedan: "Limousine (4 Passagiere)",
+          suv: "SUV (6 Passagiere)",
+          minibus: "Minibus (12 Passagiere)",
+          van: "Van (8 Passagiere)",
+        },
+      },
+      common: {
+        loading: "Wird geladen...",
+        error: "Ein Fehler ist aufgetreten",
+        success: "Vorgang erfolgreich",
+        required: "Dieses Feld ist erforderlich",
+        submit: "Absenden",
+        cancel: "Abbrechen",
+        save: "Speichern",
+        delete: "Löschen",
+        edit: "Bearbeiten",
+        search: "Suchen",
+        filter: "Filtern",
+        sort: "Sortieren",
+        view: "Anzeigen",
+        back: "Zurück",
+        next: "Weiter",
+        previous: "Zurück",
+        select: "Auswählen",
+        all: "Alle",
+        none: "Keine",
+        yes: "Ja",
+        no: "Nein",
+        confirm: "Bestätigen",
+        close: "Schließen",
+      },
+      validation: {
+        required: "Dieses Feld ist erforderlich",
+        minAdults: "Mindestens 1 Erwachsener erforderlich",
+        minChildren: "Anzahl der Kinder kann nicht negativ sein",
+        minLuggage: "Anzahl der Gepäckstücke kann nicht negativ sein",
+        integer: "Bitte geben Sie eine ganze Zahl ein",
+        futureDate:
+          "Ein Datum in der Vergangenheit kann nicht ausgewählt werden",
+      },
+    },
+  },
+  ru: {
+    translation: {
+      meta: {
+        title: {
+          main: "VIP Трансферные Услуги в Анталии",
+          full: "VIP Pazarçık - VIP Трансферные Услуги в Анталии",
+        },
+        description:
+          "Самый роскошный и комфортный VIP трансферный сервис в Анталии. Трансфер из аэропорта, трансфер из отеля, VIP трансфер и свадебный трансфер.",
+        keywords:
+          "VIP трансфер, трансфер Анталия, трансфер из аэропорта, трансфер из отеля, VIP автомобиль, люкс трансфер",
+      },
+      company: {
+        name: "VIP Pazarçık",
+        shortName: "VIP Pazarçık",
+      },
+      header: {
+        home: "Главная",
+        about: "О нас",
+        services: "Услуги",
+        cars: "Наши автомобили",
+        contact: "Контакты",
+        reservation: "Бронирование",
+        language: "Язык",
+      },
+      home: {
+        hero: {
+          title: "VIP Трансферные Услуги",
+          description:
+            "Самый роскошный и комфортный трансферный сервис в Анталии",
+          cta: "Забронировать",
+        },
+        services: {
+          title: "Наши Услуги",
+          airport: "Трансфер из Аэропорта",
+          hotel: "Трансфер из Отеля",
+          vip: "VIP Трансфер",
+          wedding: "Трансфер на Свадьбу",
+        },
+        cars: {
+          title: "Наши Автомобили",
+          viewAll: "Смотреть Все",
+          passengers: "Пассажиры",
+        },
+        cta: {
+          title: "Забронировать Сейчас",
+          description:
+            "Выберите наш VIP трансферный сервис для безопасного и комфортного путешествия",
+        },
+      },
+      about: {
+        title: "О Нас",
+        description:
+          "Как VIP Pazarçık, мы работаем над тем, чтобы предоставить нашим клиентам трансферный сервис высочайшего качества.",
+      },
+      services: {
+        title: "Наши Услуги",
+        description: "Специальные трансферные услуги для вас",
+        airport: {
+          title: "Трансфер из Аэропорта",
+          description: "Комфортный трансфер из аэропорта Анталии в ваш отель",
+        },
+        hotel: {
+          title: "Трансфер из Отеля",
+          description: "Трансферный сервис между отелями",
+        },
+        vip: {
+          title: "VIP Трансфер",
+          description: "Роскошный трансфер на специальных VIP автомобилях",
+        },
+        wedding: {
+          title: "Трансфер на Свадьбу",
+          description: "Трансферный сервис для свадеб и особых случаев",
+        },
+      },
+      cars: {
+        title: "Наши автомобили",
+        description: "Выберите подходящий автомобиль",
+        features: {
+          capacity: "Вместимость",
+          luggage: "Багаж",
+          price: "Цена",
+        },
+      },
+      contact: {
+        title: "Контакты",
+        description: "Свяжитесь с нами",
+        form: {
+          name: "Полное Имя",
+          email: "Эл. Почта",
+          phone: "Телефон",
+          message: "Сообщение",
+          submit: "Отправить",
+        },
+        info: {
+          address: "Адрес",
+          phone: "Телефон",
+          email: "Эл. Почта",
+          rights: "Все права защищены",
+        },
+      },
+      reservation: {
+        title: "Бронирование",
+        form: {
+          title: "Форма бронирования",
+        },
+        pickupType: "Тип подачи",
+        dropoffType: "Тип высадки",
+        pickupPoint: "Пункт подачи",
+        dropoffPoint: "Пункт высадки",
+        pickupRegion: "Район подачи",
+        dropoffRegion: "Район высадки",
+        car: "Автомобиль",
+        selectType: "Выберите тип",
+        selectPoint: "Выберите пункт",
+        selectRegion: "Выберите район",
+        selectHotel: "Выберите отель",
+        selectCar: "Выберите автомобиль",
+        airport: "Аэропорт",
+        hotel: "Отель",
+        submit: "Забронировать",
+        adults: "Количество взрослых",
+        children: "Количество детей",
+        luggage: "Количество багажа",
+        luggageUnit: "adet",
+        date: "Дата",
+        time: "Время",
+        message: "Сообщение",
+        messagePlaceholder: "Добавьте дополнительные заметки здесь...",
+        pickupCity: "Город подачи",
+        dropoffCity: "Город высадки",
+        selectCity: "Выберите город",
+        carTypes: {
+          sedan: "Седан (4 пассажира)",
+          suv: "Внедорожник (6 пассажиров)",
+          minibus: "Минивэн (12 пассажиров)",
+          van: "Микроавтобус (8 пассажиров)",
+        },
+      },
+      common: {
+        loading: "Загрузка...",
+        error: "Произошла ошибка",
+        success: "Операция успешна",
+        required: "Это поле обязательно",
+        submit: "Отправить",
+        cancel: "Отмена",
+        save: "Сохранить",
+        delete: "Удалить",
+        edit: "Редактировать",
+        search: "Поиск",
+        filter: "Фильтр",
+        sort: "Сортировка",
+        view: "Просмотр",
+        back: "Назад",
+        next: "Далее",
+        previous: "Предыдущий",
+        select: "Выбрать",
+        all: "Все",
+        none: "Нет",
+        yes: "Да",
+        no: "Нет",
+        confirm: "Подтвердить",
+        close: "Закрыть",
+      },
+      validation: {
+        required: "Это поле обязательно",
+        minAdults: "Требуется минимум 1 взрослый",
+        minChildren: "Количество детей не может быть отрицательным",
+        minLuggage: "Количество багажа не может быть отрицательным",
+        integer: "Пожалуйста, введите целое число",
+        futureDate: "Нельзя выбрать дату в прошлом",
+      },
+    },
+  },
+};
+
+i18n
+  .use(Backend)
+  .use(LanguageDetector)
+  .use(initReactI18next)
+  .init({
+    resources,
+    fallbackLng: "tr",
+    debug: process.env.NODE_ENV === "development",
+    detection: {
+      order: ["localStorage", "navigator"],
+      caches: ["localStorage"],
+    },
+    interpolation: {
+      escapeValue: false,
+    },
+    react: {
+      useSuspense: false,
+    },
+  });
+
+export default i18n;
