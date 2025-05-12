@@ -8,13 +8,13 @@ const resources = {
     translation: {
       meta: {
         title: {
-          main: "Antalya VIP Transfer Hizmetleri",
-          full: "VIP Pazarçık - Antalya VIP Transfer Hizmetleri",
+          main: "Antalya VIP Araç Transfer Hizmetleri",
+          full: "VIP Pazarçık - Antalya VIP Araç Transfer Hizmetleri",
         },
         description:
-          "Antalya'nın en lüks ve konforlu VIP transfer hizmeti. Havalimanı transferi, otel transferi, VIP transfer ve düğün transferi hizmetleri.",
+          "Antalya'nın en lüks ve konforlu VIP araç transfer hizmeti. Antalya Havalimanı transferi, otel transferi, VIP araç kiralama ve özel transfer hizmetleri. Mercedes Vito, Sprinter ve lüks araçlar ile güvenli ve konforlu seyahat.",
         keywords:
-          "VIP transfer, Antalya transfer, havalimanı transferi, otel transferi, VIP araç, lüks transfer",
+          "Antalya VIP transfer, Antalya havalimanı transferi, Antalya otel transferi, VIP araç kiralama, lüks transfer, Mercedes Vito transfer, Antalya özel transfer, Antalya araç kiralama",
       },
       company: {
         name: "VIP Pazarçık",
@@ -185,13 +185,13 @@ const resources = {
     translation: {
       meta: {
         title: {
-          main: "Antalya VIP Transfer Services",
-          full: "VIP Pazarçık - Antalya VIP Transfer Services",
+          main: "Antalya VIP Car Transfer Services",
+          full: "VIP Pazarçık - Antalya VIP Car Transfer Services",
         },
         description:
-          "The most luxurious and comfortable VIP transfer service in Antalya. Airport transfer, hotel transfer, VIP transfer and wedding transfer services.",
+          "The most luxurious and comfortable VIP car transfer service in Antalya. Antalya Airport transfer, hotel transfer, VIP car rental and private transfer services. Safe and comfortable travel with Mercedes Vito, Sprinter and luxury vehicles.",
         keywords:
-          "VIP transfer, Antalya transfer, airport transfer, hotel transfer, VIP car, luxury transfer",
+          "Antalya VIP transfer, Antalya airport transfer, Antalya hotel transfer, VIP car rental, luxury transfer, Mercedes Vito transfer, Antalya private transfer, Antalya car rental",
       },
       company: {
         name: "VIP Pazarçık",
@@ -359,13 +359,13 @@ const resources = {
     translation: {
       meta: {
         title: {
-          main: "Antalya VIP Transfer Dienstleistungen",
-          full: "VIP Pazarçık - Antalya VIP Transfer Dienstleistungen",
+          main: "Antalya VIP Fahrzeug Transfer Dienstleistungen",
+          full: "VIP Pazarçık - Antalya VIP Fahrzeug Transfer Dienstleistungen",
         },
         description:
-          "Der luxuriöseste und komfortabelste VIP-Transferservice in Antalya. Flughafentransfer, Hoteltransfer, VIP-Transfer und Hochzeitstransfer.",
+          "Der luxuriöseste und komfortabelste VIP-Transferservice in Antalya. Flughafentransfer Antalya, Hoteltransfer, VIP-Fahrzeugvermietung und Privattransfer. Sicherer und komfortabler Reiseverkehr mit Mercedes Vito, Sprinter und Luxusfahrzeugen.",
         keywords:
-          "VIP Transfer, Antalya Transfer, Flughafentransfer, Hoteltransfer, VIP Fahrzeug, Luxus Transfer",
+          "Antalya VIP Transfer, Antalya Flughafentransfer, Antalya Hoteltransfer, VIP Fahrzeugvermietung, Luxus Transfer, Mercedes Vito Transfer, Antalya Privattransfer, Antalya Fahrzeugvermietung",
       },
       company: {
         name: "VIP Pazarçık",
@@ -538,9 +538,9 @@ const resources = {
           full: "VIP Pazarçık - VIP Трансферные Услуги в Анталии",
         },
         description:
-          "Самый роскошный и комфортный VIP трансферный сервис в Анталии. Трансфер из аэропорта, трансфер из отеля, VIP трансфер и свадебный трансфер.",
+          "Самый роскошный и комфортный VIP трансферный сервис в Анталии. Трансфер из аэропорта Анталии, трансфер из отеля, аренда VIP автомобилей и частный трансфер. Безопасное и комфортное путешествие на Mercedes Vito, Sprinter и роскошных автомобилях.",
         keywords:
-          "VIP трансфер, трансфер Анталия, трансфер из аэропорта, трансфер из отеля, VIP автомобиль, люкс трансфер",
+          "VIP трансфер Анталия, трансфер из аэропорта Анталии, трансфер из отеля Анталии, аренда VIP автомобилей, люкс трансфер, трансфер Mercedes Vito, частный трансфер Анталия, аренда автомобилей Анталия",
       },
       company: {
         name: "VIP Pazarçık",
