@@ -1,6 +1,7 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import ReservationForm from "../components/ReservationForm";
+import ScrollToTopButton from "../components/ScrollToTopButton";
 
 const Reservation = () => {
   const { t } = useTranslation();
@@ -13,6 +14,7 @@ const Reservation = () => {
         </h1>
         <ReservationForm />
       </div>
+      <ScrollToTopButton />
     </div>
   );
 };

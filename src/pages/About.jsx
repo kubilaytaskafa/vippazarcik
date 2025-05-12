@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { FaCheckCircle } from "react-icons/fa";
+import ScrollToTopButton from "../components/ScrollToTopButton";
 
 function About() {
   const { t } = useTranslation();
@@ -55,6 +56,7 @@ function About() {
           </p>
         </div>
       </div>
+      <ScrollToTopButton />
     </div>
   );
 }

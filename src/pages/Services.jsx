@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { FaPlane, FaHotel, FaCarSide, FaUserFriends } from "react-icons/fa";
+import ScrollToTopButton from "../components/ScrollToTopButton";
 
 function Services() {
   const { t } = useTranslation();
@@ -58,6 +59,7 @@ function Services() {
           </div>
         ))}
       </div>
+      <ScrollToTopButton />
     </div>
   );
 }

@@ -1,6 +1,7 @@
 import { useSelector } from "react-redux";
 import { useTranslation } from "react-i18next";
 import { FaUsers, FaCar, FaWifi, FaSnowflake, FaChild } from "react-icons/fa";
+import ScrollToTopButton from "../components/ScrollToTopButton";
 
 function Cars() {
   const { t } = useTranslation();
@@ -107,6 +108,7 @@ function Cars() {
           ))}
         </div>
       </div>
+      <ScrollToTopButton />
     </div>
   );
 }

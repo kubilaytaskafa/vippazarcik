@@ -10,6 +10,7 @@ import {
 } from "react-icons/fa";
 import ReservationForm from "../components/ReservationForm";
 import CarGallery from "../components/CarGallery";
+import ScrollToTopButton from "../components/ScrollToTopButton";
 
 const Home = () => {
   const { t } = useTranslation();
@@ -173,6 +174,7 @@ const Home = () => {
           </Link>
         </div>
       </section>
+      <ScrollToTopButton />
     </div>
   );
 };

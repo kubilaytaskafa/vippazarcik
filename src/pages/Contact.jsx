@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { FaPhone, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 import { sendWhatsAppMessage } from "../utils/whatsapp";
+import ScrollToTopButton from "../components/ScrollToTopButton";
 
 const Contact = () => {
   const { t } = useTranslation();
@@ -128,6 +129,7 @@ ${formData.message}
           </button>
         </form>
       </div>
+      <ScrollToTopButton />
     </div>
   );
 };
