@@ -94,6 +94,11 @@ const ReservationForm = ({ onSubmit }) => {
   };
 
   const handleSubmit = (values, { setSubmitting }) => {
+    // Seçilen aracın detaylarını bul
+    const selectedCarDetails = cars.find(
+      (car) => car.id === values.selectedCar
+    );
+
     // Form verilerini birleştir
     const formData = {
       ...values,
@@ -134,7 +139,15 @@ const ReservationForm = ({ onSubmit }) => {
 
 🚘 *ARAÇ BİLGİLERİ*
 ━━━━━━━━━━━━━━━━━━━━━━━━
-${formData.selectedCar}
+🚗 Araç: *${selectedCarDetails?.name || "-"}*
+👥 Kapasite: *${selectedCarDetails?.capacity || "-"} ${t(
+      "home.cars.passengers"
+    )}*
+💰 Fiyat: *${
+      formData.pickupType === "airport"
+        ? `${selectedCarDetails?.prices?.airport || 0}€`
+        : `${selectedCarDetails?.prices?.hotel || 0}€`
+    }*
 
 👥 *YOLCU BİLGİLERİ*
 ━━━━━━━━━━━━━━━━━━━━━━━━
